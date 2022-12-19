@@ -1,0 +1,18 @@
+.d-table-container {
+    text-align: center;
+    width: 100%;
+    border-radius: 16px;
+    border: none;
+    th {
+        background: coral;
+    }
+
+    tr {
+        background: #829460;
+    }
+
+    td,
+    th {
+        padding: 6px 8px;
+    }
+}

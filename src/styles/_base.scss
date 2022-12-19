@@ -1,0 +1,15 @@
+@import './variables';
+
+.disable {
+    background: $mainDisabledColor !important;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}

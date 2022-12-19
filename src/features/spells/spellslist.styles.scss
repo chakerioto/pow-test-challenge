@@ -1,0 +1,117 @@
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.spells-container {
+  max-width: 1550px;
+  min-height: 600px;
+  overflow: hidden;
+  color: red;
+  margin: auto;
+  width: 1550px;
+  background: url("../../../public/bgtexture.png");
+  border-radius: 16px;
+  animation: 1.5s fade-up forwards ease-in-out;
+  padding: 60px;
+
+  & > p {
+    color: red;
+  }
+
+  .spells-nav {
+    margin-bottom: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    .spells-lp,
+    .spells-rp,
+    .spells-mp,
+    .spells-vmore {
+      position: relative;
+      display: inline-block;
+      color: white;
+      outline: 0;
+      border: none;
+      font-size: 1.5rem;
+      border-radius: 8px;
+      padding: 12px 24px;
+      cursor: pointer;
+      background: coral;
+      &:hover {
+        background: red;
+      }
+      .spells-sl {
+        margin-left: auto;
+        width: 100px;
+      }
+    }
+    .spells-vmore {
+      padding: 0;
+
+      &:hover {
+        background: coral;
+      }
+
+      & > p {
+        padding: 12px 24px;
+      }
+
+      &__content {
+        display: flex;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        width: 100%;
+        background: coral;
+        border-radius: inherit;
+        margin-top: 10px;
+        overflow: hidden;
+        flex-direction: column;
+        & > span {
+          padding: 12px 24px;
+          &:hover {
+            background: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    width: calc(100vw - 60px);
+  }
+  @media screen and (max-width: 765px) {
+    padding: 30px 16px;
+  }
+  @media screen and (max-width: 500px) {
+    width: calc(100vw - 32px);
+
+    .spells-nav {
+      display: flex;
+      flex-wrap: wrap;
+      .spells-lp,
+      .spells-rp,
+      .spells-mp,
+      .spells-vmore {
+        padding: 8px 16px;
+        font-size: 1rem;
+      }
+      .spells-vmore {
+        padding: 8px 16px;
+        & > p {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
